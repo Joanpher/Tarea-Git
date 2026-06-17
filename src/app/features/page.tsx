@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 
 function Container({ children }: { children: React.ReactNode }) {
@@ -11,7 +10,7 @@ function Container({ children }: { children: React.ReactNode }) {
 function DarkButton({ children }: { children: React.ReactNode }) {
   return (
     <button
-      className="pressable btn-shine group inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold bg-brand-ink text-white shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lift focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:ring-offset-2"
+      className="pressable btn-shine group inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold bg-brand-dark text-white shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lift focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:ring-offset-2"
     >
       {children}
       <span className="transition-transform duration-300 group-hover:translate-x-0.5">→</span>
@@ -22,50 +21,52 @@ function DarkButton({ children }: { children: React.ReactNode }) {
 export default function FeaturesPage() {
   return (
     <div className="min-h-screen bg-transparent">
-      <div className="sticky top-0 z-50 border-b border-brand-line bg-white/90 backdrop-blur">
+      <div className="sticky top-0 z-50 bg-brand-surface/95 backdrop-blur">
         <Container>
-          <div className="flex h-16 items-center justify-between">
-            <Link className="group flex items-center gap-3" href="/">
-              <div className="relative h-9 w-9 overflow-hidden rounded-xl bg-brand-ink ring-1 ring-black/10 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-[1.04] group-hover:rotate-1 group-hover:shadow-[0_16px_40px_rgba(250,204,21,0.28)]">
-                <Image src="/logo.png" alt="Hello eCard" fill className="object-contain p-1 transition-transform duration-300 group-hover:scale-[1.03]" priority={false} />
-              </div>
-              <span className="text-sm font-semibold tracking-tight text-brand-ink">Hello eCard</span>
+          <div className="flex h-20 items-center justify-between">
+            <Link href="/" className="group flex items-center gap-2.5">
+              <span className="relative grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brand-accent/15 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:bg-brand-accent/25">
+                <svg viewBox="0 0 24 24" fill="none" className="h-4.5 w-4.5 text-brand-accent" aria-hidden="true">
+                  <circle cx="7" cy="7" r="2.1" fill="currentColor" />
+                  <circle cx="17" cy="7" r="2.1" fill="currentColor" opacity="0.55" />
+                  <circle cx="7" cy="17" r="2.1" fill="currentColor" opacity="0.55" />
+                  <circle cx="17" cy="17" r="2.1" fill="currentColor" />
+                </svg>
+              </span>
+              <span className="text-sm font-bold uppercase tracking-[0.18em] text-brand-ink">NewCard</span>
             </Link>
 
-            <div className="hidden items-center gap-2 text-sm text-brand-muted md:flex">
+            <div className="hidden items-center gap-8 text-sm md:flex">
               <Link
-                className="group relative rounded-full px-4 py-2 font-medium transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-accent/15 hover:text-brand-ink hover:shadow-soft"
+                className="relative pb-1 font-medium text-brand-muted transition-colors duration-300 hover:text-brand-ink"
                 href="/"
               >
                 Home
-                <span className="absolute inset-x-3 -bottom-0.5 h-[2px] w-0 rounded-full bg-brand-accent transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]" />
               </Link>
               <Link
-                className="group relative rounded-full px-4 py-2 font-medium transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-accent/15 hover:text-brand-ink hover:shadow-soft"
+                className="relative pb-1 font-medium text-brand-muted transition-colors duration-300 hover:text-brand-ink"
                 href="/about"
               >
                 About Us
-                <span className="absolute inset-x-3 -bottom-0.5 h-[2px] w-0 rounded-full bg-brand-accent transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]" />
               </Link>
-              <span className="group relative rounded-full px-4 py-2 font-medium text-brand-ink">
+              <span className="relative pb-1 font-semibold text-brand-ink">
                 Features
-                <span className="absolute inset-x-3 -bottom-0.5 h-[2px] rounded-full bg-brand-accent" />
+                <span className="absolute inset-x-0 -bottom-0.5 h-[2px] rounded-full bg-brand-accent" />
               </span>
               <Link
-                className="group relative rounded-full px-4 py-2 font-medium transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-accent/15 hover:text-brand-ink hover:shadow-soft"
+                className="relative pb-1 font-medium text-brand-muted transition-colors duration-300 hover:text-brand-ink"
                 href="/#plans"
               >
                 Plans
-                <span className="absolute inset-x-3 -bottom-0.5 h-[2px] w-0 rounded-full bg-brand-accent transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]" />
               </Link>
               <Link
-                className="group relative rounded-full px-4 py-2 font-medium transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-accent/15 hover:text-brand-ink hover:shadow-soft"
+                className="relative pb-1 font-medium text-brand-muted transition-colors duration-300 hover:text-brand-ink"
                 href="/#support"
               >
                 Support
-                <span className="absolute inset-x-3 -bottom-0.5 h-[2px] w-0 rounded-full bg-brand-accent transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]" />
               </Link>
             </div>
+
           </div>
         </Container>
       </div>
@@ -98,7 +99,7 @@ export default function FeaturesPage() {
                       <div className="h-full w-full rounded-2xl bg-gradient-to-br from-brand-accent/20 via-brand-accent/10 to-brand-soft" />
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-white/0 to-black/15" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/10 via-transparent to-black/15" />
                 </motion.div>
               </div>
             </motion.div>
@@ -107,7 +108,7 @@ export default function FeaturesPage() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: [0.25, 1, 0.5, 1] }}
-              className="mt-8 overflow-hidden rounded-[1.75rem] border border-black/10 bg-white shadow-soft"
+              className="mt-8 overflow-hidden rounded-[1.75rem] border border-black/10 bg-brand-surface shadow-soft"
             >
               <div className="bg-black px-8 py-10 text-white sm:px-10">
                 <div className="font-display text-balance text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">
@@ -115,7 +116,7 @@ export default function FeaturesPage() {
                 </div>
               </div>
 
-              <div className="relative bg-white">
+              <div className="relative bg-brand-surface">
                 <div className="relative h-[240px] overflow-hidden bg-black/10 sm:h-[280px]">
                   <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/30" />
                   <div className="absolute inset-0">
@@ -177,7 +178,7 @@ export default function FeaturesPage() {
                   transition={{ duration: 0.9, ease: [0.25, 1, 0.5, 1] }}
                   className="relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-brand-ink to-black px-6 py-10 text-white shadow-lift sm:px-10"
                 >
-                  <div className="pointer-events-none absolute inset-0 opacity-90" style={{ background: 'radial-gradient(900px 300px at 20% 20%, rgba(250,204,21,0.18), rgba(250,204,21,0) 60%)' }} />
+                  <div className="pointer-events-none absolute inset-0 opacity-90" style={{ background: 'radial-gradient(900px 300px at 20% 20%, rgba(63, 143, 86,0.18), rgba(63, 143, 86,0) 60%)' }} />
 
                   <div className="relative">
                     <h3 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -217,7 +218,7 @@ export default function FeaturesPage() {
                   initial={{ opacity: 0, y: 25 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.9, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
-                  className="relative overflow-hidden rounded-[2rem] border border-black/10 bg-white p-8 shadow-lift"
+                  className="relative overflow-hidden rounded-[2rem] border border-black/10 bg-brand-surface p-8 shadow-lift"
                 >
                   <h3 className="text-balance text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl">
                     Advanced Analytics
@@ -251,7 +252,7 @@ export default function FeaturesPage() {
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
-                className="relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-brand-soft to-white px-6 py-10 shadow-lift sm:px-10"
+                className="relative overflow-hidden rounded-[2rem] bg-gradient-to-b from-brand-soft to-brand-surface px-6 py-10 shadow-lift sm:px-10"
               >
                 <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
                   <div>

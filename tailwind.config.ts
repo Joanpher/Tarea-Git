@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  darkMode: 'class',
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
@@ -10,12 +11,13 @@ const config: Config = {
       },
       colors: {
         brand: {
-          accent: '#facc15',
-          ink: '#000000',
-          muted: '#111111',
-          surface: '#ffffff',
-          line: '#ececec',
-          soft: '#f1f1f1',
+          accent: 'rgb(var(--brand-accent) / <alpha-value>)',
+          ink: 'rgb(var(--brand-ink) / <alpha-value>)',
+          muted: 'rgb(var(--brand-muted) / <alpha-value>)',
+          surface: 'rgb(var(--brand-surface) / <alpha-value>)',
+          line: 'rgb(var(--brand-line) / <alpha-value>)',
+          soft: 'rgb(var(--brand-soft) / <alpha-value>)',
+          dark: '#15281c',
         },
       },
       boxShadow: {
@@ -24,7 +26,7 @@ const config: Config = {
       },
       backgroundImage: {
         'hero-gradient':
-          'radial-gradient(1200px 600px at 30% 10%, rgba(250,204,21,0.22), rgba(250,204,21,0) 60%), radial-gradient(900px 500px at 80% 20%, rgba(255,255,255,0.18), rgba(255,255,255,0) 55%)',
+          'radial-gradient(1200px 600px at 30% 10%, rgba(63, 143, 86,0.22), rgba(63, 143, 86,0) 60%), radial-gradient(900px 500px at 80% 20%, rgba(143,184,110,0.14), rgba(143,184,110,0) 55%)',
       },
     },
   },

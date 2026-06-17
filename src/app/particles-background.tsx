@@ -21,11 +21,11 @@ export default function ParticlesBackground() {
         w.particlesJS('particles-js', {
           particles: {
             number: { value: 240, density: { enable: true, value_area: 900 } },
-            color: { value: ['#facc15', '#0b0b0b', '#ffffff'] },
-            shape: { type: 'circle', stroke: { width: 0, color: '#000000' }, polygon: { nb_sides: 5 } },
+            color: { value: ['#3f8f56', '#8fb86e', '#fbf7ec'] },
+            shape: { type: 'circle', stroke: { width: 0, color: '#15281c' }, polygon: { nb_sides: 5 } },
             opacity: { value: 0.82, random: true, anim: { enable: false, speed: 1, opacity_min: 0.22, sync: false } },
             size: { value: 7.5, random: true, anim: { enable: false, speed: 30, size_min: 0.9, sync: false } },
-            line_linked: { enable: true, distance: 150, color: '#0b0b0b', opacity: 0.18, width: 1 },
+            line_linked: { enable: true, distance: 150, color: '#3f8f56', opacity: 0.18, width: 1 },
             move: {
               enable: true,
               speed: 1.8,
