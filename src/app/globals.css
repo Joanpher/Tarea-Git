@@ -5,13 +5,13 @@
 :root {
   --bg: #fbf7ec;
   --fg: #15281c;
-  --accent: #3f8f56;
+  --accent: #3f6f8f;
   --ink: #15281c;
   --surface: #fbf7ec;
   --line: rgba(63, 143, 86, 0.16);
   --shadow: rgba(21, 40, 28, 0.14);
 
-  --brand-accent: 63 143 86;
+  --brand-accent: 63 111 143;
   --brand-ink: 21 40 28;
   --brand-muted: 59 74 62;
   --brand-surface: 251 247 236;
@@ -22,13 +22,13 @@
 .dark {
   --bg: #0e1b13;
   --fg: #eef2e3;
-  --accent: #6fbf7f;
+  --accent: #6f9fbf;
   --ink: #eef2e3;
   --surface: #122218;
   --line: rgba(111, 191, 127, 0.18);
   --shadow: rgba(0, 0, 0, 0.45);
 
-  --brand-accent: 111 191 127;
+  --brand-accent: 111 159 191;
   --brand-ink: 238 242 227;
   --brand-muted: 184 198 184;
   --brand-surface: 18 34 24;
